@@ -1,0 +1,25 @@
+{
+  "name": "secret-santa-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool, to send mails to participants, telling each one who they need to buy a gift for.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophietk/secret-santa-cli.git"
+  },
+  "keywords": [
+    "secret",
+    "santa",
+    "gift",
+    "random",
+    "christmas"
+  ],
+  "author": "sophietk",
+  "bugs": {
+    "url": "https://github.com/sophietk/secret-santa-cli/issues"
+  },
+  "homepage": "https://github.com/sophietk/secret-santa-cli#readme"
+}
