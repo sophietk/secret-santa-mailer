@@ -20,9 +20,38 @@ describe('santa', () => {
 
   describe('setParticipants', () => {
     it('should change participants', () => {
-      santa.setParticipants(['Guybrush', 'Le Chuck'])
+      santa.setParticipants([
+        { name: 'Guybrush', email: 'guybrush@monkeyisland.net' },
+        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net' }
+      ])
       santa.getParticipants().should.be.an('array')
-        .and.have.members(['Guybrush', 'Le Chuck'])
+        .that.have.deep.members([
+          { name: 'Guybrush', email: 'guybrush@monkeyisland.net' },
+          { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net' }
+        ])
+    })
+  })
+
+  describe('randomize', () => {
+    it('should return an array with same number of participants', () => {
+      santa.setParticipants([
+        { name: 'Guybrush', email: 'guybrush@monkeyisland.net' },
+        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net' },
+        { name: 'Elaine', email: 'elaine@monkeyisland.net' }
+      ])
+      santa.randomize().should.be.an('array')
+        .that.have.lengthOf(3)
+    })
+
+    it('should return a loop of santas', () => {
+      santa.setParticipants([
+        { name: 'Guybrush', email: 'guybrush@monkeyisland.net' },
+        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net' }
+      ])
+      santa.randomize().should.include.deep.members([
+        { name: 'Guybrush', email: 'guybrush@monkeyisland.net', shouldBuyGiftTo: 'Le Chuck' },
+        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net', shouldBuyGiftTo: 'Guybrush' }
+      ])
     })
   })
 })
