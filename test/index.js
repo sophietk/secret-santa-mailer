@@ -11,4 +11,18 @@ describe('santa', () => {
   it('should exist', () => {
     santa.should.not.be.undefined
   })
+
+  describe('getParticipants', () => {
+    it('should return participants', () => {
+      santa.getParticipants().should.be.an('array').that.is.empty
+    })
+  })
+
+  describe('setParticipants', () => {
+    it('should change participants', () => {
+      santa.setParticipants(['Guybrush', 'Le Chuck'])
+      santa.getParticipants().should.be.an('array')
+        .and.have.members(['Guybrush', 'Le Chuck'])
+    })
+  })
 })
