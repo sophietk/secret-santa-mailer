@@ -28,4 +28,4 @@ In dry-run mode:
 More features to come
 ---------------------
 
-- Exclude some participants when picking the santa of someone (no gift between a couple...)
+- Exclude some participants when picking the santa of someone (no gift for a partner...)
