@@ -7,7 +7,11 @@
     "pretest": "npm run lint",
     "test": "mocha test",
     "lint": "eslint *.js lib test",
-    "mocha": "mocha test"
+    "mocha": "mocha test",
+    "watch": "npm-watch"
+  },
+  "watch": {
+    "test": "{lib,test}/*.js"
   },
   "repository": {
     "type": "git",
