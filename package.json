@@ -6,12 +6,16 @@
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha test",
-    "lint": "eslint *.js lib test",
+    "lint": "eslint *.js bin lib test",
     "mocha": "mocha test",
     "watch": "npm-watch"
   },
   "watch": {
-    "test": "{lib,test}/*.js"
+    "lint": "{bin,lib,test}/*.js",
+    "mocha": "{lib,test}/*.js"
+  },
+  "bin": {
+    "secret-santa": "bin/index.js"
   },
   "repository": {
     "type": "git",

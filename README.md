@@ -17,7 +17,7 @@ Use
 
 ```bash
     npm i -g secret-santa-cli
-    secret-santa-cli ...
+    secret-santa 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
 ```
 
 
