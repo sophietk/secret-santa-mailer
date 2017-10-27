@@ -1,17 +1,43 @@
 #! /usr/bin/env node
 
-const santa = require('../lib')
+const program = require('commander')
 
-console.log('Executing secret-santa...')
+program
+  .option('-d, --dry-run', 'do not send mail and log result')
+  .parse(process.argv)
 
-const participants = process.argv.slice(2)
-  .map(string => {
-    const name = string.split('<')[0]
-    const email = string.split('<')[1].split('>')[0]
-    return { name, email }
+if (program.args.length === 0) {
+  program.outputHelp()
+} else {
+  execute()
+}
+
+function execute () {
+  console.log('Executing secret-santa...')
+
+  const participants = program.args
+    .map(string => {
+      const name = string.split('<')[0]
+      const email = string.split('<')[1].split('>')[0]
+      return { name, email }
+    })
+
+  const santa = require('../lib')
+  santa.setParticipants(participants)
+  const result = santa.randomize()
+
+  result.forEach(santa => {
+    const email = {
+      subject: 'Secret santa',
+      to: santa.email,
+      body: `Hi ${santa.name}, you should buy a gift for ${santa.shouldBuyGiftFor} \n\nParticipants: ${program.args}`
+    }
+    if (program.dryRun) {
+      console.log(email)
+    } else {
+      // todo, send mail
+    }
   })
 
-santa.setParticipants(participants)
-const result = santa.randomize()
-
-console.log(result)
+  console.log('Done!')
+}

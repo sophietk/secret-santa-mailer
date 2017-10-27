@@ -49,8 +49,8 @@ describe('santa', () => {
         { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net' }
       ])
       santa.randomize().should.include.deep.members([
-        { name: 'Guybrush', email: 'guybrush@monkeyisland.net', shouldBuyGiftTo: 'Le Chuck' },
-        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net', shouldBuyGiftTo: 'Guybrush' }
+        { name: 'Guybrush', email: 'guybrush@monkeyisland.net', shouldBuyGiftFor: 'Le Chuck' },
+        { name: 'Le Chuck', email: 'le-chuck@monkeyisland.net', shouldBuyGiftFor: 'Guybrush' }
       ])
     })
   })

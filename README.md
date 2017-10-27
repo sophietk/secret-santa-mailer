@@ -20,6 +20,10 @@ Use
     secret-santa 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
 ```
 
+In dry-run mode:
+```bash
+    secret-santa -d 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
+```
 
 More features to come
 ---------------------
