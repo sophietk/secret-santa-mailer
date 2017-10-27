@@ -2,7 +2,7 @@
   "name": "secret-santa-cli",
   "version": "1.0.0",
   "description": "A CLI tool, to send mails to participants, telling each one who they need to buy a gift for.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha test",
