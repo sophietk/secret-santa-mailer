@@ -33,11 +33,12 @@ santa.setParticipants(participants)
 const result = santa.randomize()
 
 const from = program.authUser || 'noreply@secret-santa-mailer.dev'
+const participantsList = participants.map(({ name, email }) => `- ${name} (${email})`).join('<br>')
 const emailsToSend = result.map(santa => ({
   from: `"Secret santa 🎅" <${from}>`,
   to: santa.email,
   subject: program.subject || 'Secret santa ' + (new Date()).getFullYear(),
-  html: `<h3>Hi ${santa.name},</h3>You should buy a gift for <b>${santa.shouldBuyGiftFor}</b>.<br><br>Participants: ${program.args.join(', ')}`
+  html: `<h3>Hi ${santa.name},</h3>You should buy a gift for <b>${santa.shouldBuyGiftFor}</b>.<br><br>Participants:<br>${participantsList}<br>`
 }))
 
 if (program.dryRun) {
