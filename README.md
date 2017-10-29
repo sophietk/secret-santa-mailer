@@ -17,12 +17,18 @@ Use
 
 ```bash
     npm i -g secret-santa-mailer
-    secret-santa-mailer 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
+    secret-santa-mailer 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>' -d
 ```
 
-In dry-run mode:
-```bash
-    secret-santa-mailer -d 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
+Options:
+```
+-d, --dry-run                   do not send mail and log result
+-s, --subject <subject>         the mail subject
+-H, --host <host>               host address for mail configuration
+-P, --port <port>               port for mail configuration
+-u, --auth-user <email>         auth user or email for mail configuration
+-p, --auth-password <password>  auth password for mail configuration
+-h, --help                      output usage information
 ```
 
 More features to come
