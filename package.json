@@ -1,7 +1,7 @@
 {
-  "name": "secret-santa-cli",
+  "name": "secret-santa-mailer",
   "version": "1.0.0",
-  "description": "A CLI tool, to send mails to participants, telling each one who they need to buy a gift for.",
+  "description": "A CLI tool to send mails to participants, telling each one who they need to buy a gift for.",
   "main": "lib/index.js",
   "scripts": {
     "pretest": "npm run lint",
@@ -15,11 +15,11 @@
     "mocha": "{lib,test}/*.js"
   },
   "bin": {
-    "secret-santa": "bin/index.js"
+    "secret-santa-mailer": "bin/index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sophietk/secret-santa-cli.git"
+    "url": "git+https://github.com/sophietk/secret-santa-mailer.git"
   },
   "keywords": [
     "secret",
@@ -30,9 +30,9 @@
   ],
   "author": "sophietk",
   "bugs": {
-    "url": "https://github.com/sophietk/secret-santa-cli/issues"
+    "url": "https://github.com/sophietk/secret-santa-mailer/issues"
   },
-  "homepage": "https://github.com/sophietk/secret-santa-cli#readme",
+  "homepage": "https://github.com/sophietk/secret-santa-mailer#readme",
   "devDependencies": {
     "chai": "4.1.2",
     "eslint": "4.9.0",

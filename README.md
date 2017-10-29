@@ -1,5 +1,5 @@
-secret-santa-cli
-================
+secret-santa-mailer
+===================
 
 A CLI tool, to send mails to participants, telling each one who they need to buy a gift for.
 
@@ -16,13 +16,13 @@ Use
 ---
 
 ```bash
-    npm i -g secret-santa-cli
-    secret-santa 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
+    npm i -g secret-santa-mailer
+    secret-santa-mailer 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
 ```
 
 In dry-run mode:
 ```bash
-    secret-santa -d 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
+    secret-santa-mailer -d 'Guybrush<guybrush@monkeyisland.net>' 'Le Chuck<le-chuck@monkeyisland.net>' 'Elaine<elaine@monkeyisland.net>'
 ```
 
 More features to come
