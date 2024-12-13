@@ -45,8 +45,8 @@
     "mocha": "11.0.1"
   },
   "dependencies": {
-    "commander": "2.11.0",
-    "lodash": "4.17.4",
+    "commander": "12.1.0",
+    "lodash": "4.17.21",
     "nodemailer": "4.3.1"
   }
 }
