@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A CLI tool to send mails to participants, telling each one who they need to buy a gift for.",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
     "pretest": "npm run lint",
     "test": "mocha test",
@@ -34,14 +35,14 @@
   },
   "homepage": "https://github.com/sophietk/secret-santa-mailer#readme",
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "5.1.2",
     "eslint": "4.9.0",
     "eslint-config-standard": "10.2.1",
     "eslint-plugin-import": "2.8.0",
     "eslint-plugin-node": "5.2.1",
     "eslint-plugin-promise": "3.6.0",
     "eslint-plugin-standard": "3.0.1",
-    "mocha": "4.0.1"
+    "mocha": "11.0.1"
   },
   "dependencies": {
     "commander": "2.11.0",
